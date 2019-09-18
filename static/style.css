@@ -1,0 +1,36 @@
+
+/* sensors.html */
+table {
+    table-layout: fixed;
+    width: 100%;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+table tr td {
+    font-size: 12px;
+}
+
+.card-text {
+    font-size: 12px;
+}
+
+.first-td-width {
+    width: 68%;
+}
+
+.second-td-width {
+    width: 32%;
+}
+
+.btn-border {
+    border: 1px solid lightgray;
+}
+
+.btn-border:hover {
+    border: 1px solid lightgray;
+}
+
+.nav-tabs > li > a {
+    color: dimgray;
+}

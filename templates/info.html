@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">Info</h1>
+    <div class="btn-toolbar mb-2 mb-md-0">
+        <!-- Share and download buttons -->
+        <div class="btn-group mr-2">
+            <a class="btn btn-sm btn-outline-secondary" href="mailto:?subject=Vesikasvatusympäristön%20monitorointi&amp;body=Katso%20seuraava%20linkki%20http://luna.chydenius.fi/~sensoriverkkoproj/info.html"><span data-feather="mail"></span> Lähetä linkki</a>
+            <button onclick="window.print();return false;" type="button" class="btn btn-sm btn-outline-secondary">
+                <span data-feather="printer"></span> Tulosta
+            </button>
+        </div>
+    </div>
+</div>
+<div>
+<h5>Käytetyt laitteet ja teknologiat</h5>
+<p>Alle on listattu projektissa käytetyt laitteet ja teknologiat, joiden avulla koko projekti toimii. Listattujen laitteiden ja teknologioiden avulla käyttäjä ymmärtää kuinka projekti on rakennettu ja kuinka projektia voidaan mahdollisesti jatkokehittää.</p>
+<br>
+<img src="{{url_for('static', filename='img/arkkitehtuurikuvaus.jpg')}}" style="max-width:500px" onclick="document.getElementById('arkkitehtuuri').style.display='block'" class="hover-opacity" alt="Arkkitehtuurikuvaus">
+<div id="arkkitehtuuri" class="modal animate-zoom" onclick="this.style.display='none'">
+    <img class="modal-content" style="height:100%" src="img/arkkitehtuurikuvaus.jpg" alt="Arkkitehtuurikuvaus">
+</div>
+<br>
+<p>Järjestelmän arkkitehtuuri ja laitteisto koostuu sensoreista, mikrokontrollerista, web-palvelimesta ja loppukäyttäjälle suunnatusta web-sovelluksesta edellä olevan kuvan mukaisesti. Mitattavia suureita on yhteensä 7, joista 4 liittyy kasvihuoneympäristön monitorointiin ja 3 ravinneliuoksen tarkkailuun. Ympäristöstä saadaan tietoa lämpötila-, kosteus-, valoisuus- ja hiilidioksidisensoreiden kautta ja ravinneliuoksesta sen lämpötilan, pH-arvon ja sähkönjohtavuuden avulla. Sensoreilta data kerätään Arduino Uno Rev2 -mikrokontrolleriin, jossa sisäänrakennettu WiFi-moduuli mahdollistaa tietojen lähettämisen eteenpäin langattoman verkon kautta Internetin yli web-palvelimelle. Palvelimella tieto kerätään MySQL-pohjaiseen relaatiotietokantaan, josta tiedot poimitaan loppukäyttäjälle mittaukset visualisoivaan selainpohjaiseen web-sovellukseen.</p>
+</div>
+{% endblock %}
