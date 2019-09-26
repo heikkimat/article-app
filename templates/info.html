@@ -15,13 +15,11 @@
 </div>
 <div>
 <h5>Käytetyt laitteet ja teknologiat</h5>
-<p>Alle on listattu projektissa käytetyt laitteet ja teknologiat, joiden avulla koko projekti toimii. Listattujen laitteiden ja teknologioiden avulla käyttäjä ymmärtää kuinka projekti on rakennettu ja kuinka projektia voidaan mahdollisesti jatkokehittää.</p>
+<p>Järjestelmän arkkitehtuuri ja laitteisto koostuu sensoreista, mikrokontrollerista, web-palvelimesta ja loppukäyttäjälle suunnatusta web-sovelluksesta edellä olevan kuvan mukaisesti. Mitattavia suureita on yhteensä 7, joista 4 liittyy kasvihuoneympäristön monitorointiin ja 3 ravinneliuoksen tarkkailuun. Ympäristöstä saadaan tietoa lämpötila-, kosteus-, valoisuus- ja hiilidioksidisensoreiden kautta ja ravinneliuoksesta sen lämpötilan, pH-arvon ja sähkönjohtavuuden avulla. Sensoreilta data kerätään Arduino Uno WiFi Rev2 -mikrokontrolleriin, jossa sisäänrakennettu WiFi-moduuli mahdollistaa tietojen lähettämisen eteenpäin langattoman verkon kautta Internetin yli web-palvelimelle. Palvelimella tieto kerätään MySQL-pohjaiseen relaatiotietokantaan, josta tiedot poimitaan loppukäyttäjälle mittaukset visualisoivaan selainpohjaiseen web-sovellukseen.</p>
 <br>
 <img src="{{url_for('static', filename='img/arkkitehtuurikuvaus.jpg')}}" style="max-width:500px" onclick="document.getElementById('arkkitehtuuri').style.display='block'" class="hover-opacity" alt="Arkkitehtuurikuvaus">
 <div id="arkkitehtuuri" class="modal animate-zoom" onclick="this.style.display='none'">
-    <img class="modal-content" style="height:100%" src="img/arkkitehtuurikuvaus.jpg" alt="Arkkitehtuurikuvaus">
+    <img class="modal-content" style="height:100%" src="{{url_for('static', filename='img/arkkitehtuurikuvaus.jpg')}}" alt="Arkkitehtuurikuvaus">
 </div>
-<br>
-<p>Järjestelmän arkkitehtuuri ja laitteisto koostuu sensoreista, mikrokontrollerista, web-palvelimesta ja loppukäyttäjälle suunnatusta web-sovelluksesta edellä olevan kuvan mukaisesti. Mitattavia suureita on yhteensä 7, joista 4 liittyy kasvihuoneympäristön monitorointiin ja 3 ravinneliuoksen tarkkailuun. Ympäristöstä saadaan tietoa lämpötila-, kosteus-, valoisuus- ja hiilidioksidisensoreiden kautta ja ravinneliuoksesta sen lämpötilan, pH-arvon ja sähkönjohtavuuden avulla. Sensoreilta data kerätään Arduino Uno Rev2 -mikrokontrolleriin, jossa sisäänrakennettu WiFi-moduuli mahdollistaa tietojen lähettämisen eteenpäin langattoman verkon kautta Internetin yli web-palvelimelle. Palvelimella tieto kerätään MySQL-pohjaiseen relaatiotietokantaan, josta tiedot poimitaan loppukäyttäjälle mittaukset visualisoivaan selainpohjaiseen web-sovellukseen.</p>
 </div>
 {% endblock %}

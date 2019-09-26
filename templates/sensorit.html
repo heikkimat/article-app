@@ -1,11 +1,20 @@
 {% extends 'layout.html' %}
 
 {% block body %}
-<div class="container-fluid">
+
     <!-- Main content -->
     <main class="col-md-12 ml-sm-auto col-lg-12 px-4">
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
             <h1 class="h2">Sensorit</h1>
+            <div class="btn-toolbar mb-2 mb-md-0">
+                <!-- Share and download buttons -->
+                <div class="btn-group mr-2">
+                    <a class="btn btn-sm btn-outline-secondary" href="mailto:?subject=Vesikasvatusympäristön%20monitorointi&amp;body=Katso%20seuraava%20linkki%20http://luna.chydenius.fi/~sensoriverkkoproj/sensorit.html"><span data-feather="mail"></span> Lähetä linkki</a>
+                    <button onclick="window.print();return false;" type="button" class="btn btn-sm btn-outline-secondary">
+                        <span data-feather="printer"></span> Tulosta
+                    </button>
+                </div>
+            </div>
         </div>
         <!-- Main content text -->
         <h5>Alla lisätietoa vesikasvatusympäristössä käytössä olevista sensoreista ja niiden käyttötarkoituksesta</h5>
@@ -104,7 +113,7 @@
                         </div>
                         <div class="tab-content">
                             <div class="tab-pane fade show active" id="co-home" role="tabpanel" aria-labelledby="co-home-tab">
-                                <img src="imgs-sensors/co2.jpg" class="card-img-top" alt="...">
+                                <img src="{{url_for('static', filename='img/co2.jpg')}}" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h6 class="card-subtitle mb-2">Hiilidioksidi</h6>
                                     <p class="card-text">
@@ -114,7 +123,7 @@
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="co-specs" role="tabpanel" aria-labelledby="co-specs-tab">
-                                <img src="imgs-sensors/co22.jpg" class="card-img-top" alt="...">
+                                <img src="{{url_for('static', filename='img/co22.jpg')}}" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h6 class="card-subtitle mb-2">Hiilidioksidi</h6>
                                     <table>
@@ -143,7 +152,7 @@
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="co-uses" role="tabpanel" aria-labelledby="co-uses-tab">
-                                <img src="imgs-sensors/co23.jpg" class="card-img-top" alt="...">
+                                <img src="{{url_for('static', filename='img/co23.jpg')}}" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h6 class="card-subtitle mb-2">Hiilidioksidi</h6>
                                     <p class="card-text">
@@ -174,7 +183,7 @@
                         </div>
                         <div class="tab-content">
                             <div class="tab-pane fade show active" id="light-home" role="tabpanel" aria-labelledby="light-home-tab">
-                                <img src="imgs-sensors/light.jpg" class="card-img-top" alt="...">
+                                <img src="{{url_for('static', filename='img/light.jpg')}}" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h6 class="card-subtitle mb-2">Valoisuus</h6>
                                     <p class="card-text">
@@ -184,7 +193,7 @@
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="light-specs" role="tabpanel" aria-labelledby="light-specs-tab">
-                                <img src="imgs-sensors/light2.jpg" class="card-img-top" alt="...">
+                                <img src="{{url_for('static', filename='img/light2.jpg')}}" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h6 class="card-subtitle mb-2">Valoisuus</h6>
                                     <table>
@@ -209,7 +218,7 @@
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="light-uses" role="tabpanel" aria-labelledby="light-uses-tab">
-                                <img src="imgs-sensors/light3.jpg" class="card-img-top" alt="...">
+                                <img src="{{url_for('static', filename='img/light3.jpg')}}" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h6 class="card-subtitle mb-2">Valoisuus</h6>
                                     <p class="card-text">
@@ -244,7 +253,7 @@
                         </div>
                         <div class="tab-content">
                             <div class="tab-pane fade show active" id="ph-home" role="tabpanel" aria-labelledby="ph-home-tab">
-                                <img src="imgs-sensors/ph.jpg" class="card-img-top" alt="...">
+                                <img src="{{url_for('static', filename='img/ph.jpg')}}" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h6 class="card-subtitle mb-2">pH</h6>
                                     <p class="card-text">
@@ -254,7 +263,7 @@
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="ph-specs" role="tabpanel" aria-labelledby="ph-specs-tab">
-                                <img src="imgs-sensors/ph2.jpg" class="card-img-top" alt="...">
+                                <img src="{{url_for('static', filename='img/ph2.jpg')}}" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h6 class="card-subtitle mb-2">pH</h6>
                                     <table>
@@ -279,7 +288,7 @@
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="ph-uses" role="tabpanel" aria-labelledby="ph-uses-tab">
-                                <img src="imgs-sensors/ph3.jpg" class="card-img-top" alt="...">
+                                <img src="{{url_for('static', filename='img/ph3.jpg')}}" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h6 class="card-subtitle mb-2">pH</h6>
                                     <p class="card-text">
@@ -310,7 +319,7 @@
                         </div>
                         <div class="tab-content">
                             <div class="tab-pane fade show active" id="ec-home" role="tabpanel" aria-labelledby="ec-home-tab">
-                                <img src="imgs-sensors/ec.jpg" class="card-img-top" alt="...">
+                                <img src="{{url_for('static', filename='img/ec.jpg')}}" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h6 class="card-subtitle mb-2">Sähkönjohtavuus</h6>
                                     <p class="card-text">
@@ -320,7 +329,7 @@
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="ec-specs" role="tabpanel" aria-labelledby="ec-specs-tab">
-                                <img src="imgs-sensors/ec2.jpg" class="card-img-top" alt="...">
+                                <img src="{{url_for('static', filename='img/ec2.jpg')}}" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h6 class="card-subtitle mb-2">Sähkönjohtavuus</h6>
                                     <table>
@@ -341,7 +350,7 @@
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="ec-uses" role="tabpanel" aria-labelledby="ec-uses-tab">
-                                <img src="imgs-sensors/ec3.jpg" class="card-img-top" alt="...">
+                                <img src="{{url_for('static', filename='img/ec3.jpg')}}" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h6 class="card-subtitle mb-2">Sähkönjohtavuus</h6>
                                     <p class="card-text">
@@ -372,7 +381,7 @@
                         </div>
                         <div class="tab-content">
                             <div class="tab-pane fade show active" id="water-home" role="tabpanel" aria-labelledby="water-home-tab">
-                                <img src="imgs-sensors/water.jpg" class="card-img-top" alt="...">
+                                <img src="{{url_for('static', filename='img/water.jpg')}}" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h6 class="card-subtitle mb-2">Veden lämpötila</h6>
                                     <p class="card-text">
@@ -382,7 +391,7 @@
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="water-specs" role="tabpanel" aria-labelledby="water-specs-tab">
-                                <img src="imgs-sensors/water2.jpg" class="card-img-top" alt="...">
+                                <img src="{{url_for('static', filename='img/water2.jpg')}}" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h6 class="card-subtitle mb-2">Veden lämpötila</h6>
                                     <table>
@@ -407,7 +416,7 @@
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="water-uses" role="tabpanel" aria-labelledby="water-uses-tab">
-                                <img src="imgs-sensors/water3.jpg" class="card-img-top" alt="...">
+                                <img src="{{url_for('static', filename='img/water3.jpg')}}" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h6 class="card-subtitle mb-2">Veden lämpötila</h6>
                                     <p class="card-text">
@@ -422,5 +431,5 @@
             </div>
         </div>
     </main>
-</div>
+
 {% endblock %}

@@ -31,7 +31,6 @@ class RegisterForm(Form):
     ])
     confirm = PasswordField('Confirm Password')
 
-
 # User Register
 @app.route('/register', methods=['GET', 'POST'])
 def register():
